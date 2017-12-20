@@ -18,6 +18,9 @@ io.on('connection', function (socket) {
     socket.on('chat', function (msg) {
         io.emit('chat', msg);
     });
+    socket.on('pMove', function (move) {
+        io.emit('pMove', move);
+    });
   });
 
 http.listen(3000, function () {
